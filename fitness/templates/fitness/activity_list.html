@@ -1,0 +1,14 @@
+{% extends 'fitness/base.html' %}
+{% block content %}
+    <h1>Activity List</h1>
+    <ul>
+    {% for activity in activities %}
+        <li>{{ activity.activity_type }}: {{ activity.duration }}, Calories burned: {{activity.calories_burned}}, Date: {{activity.date_time}}</li>
+    {% empty %}
+        <li>No activities recorded.</li>
+    {% endfor %}
+    </ul>
+    <a href="{% url 'add_activity' %}" style="color: #e71414; text-decoration: none; margin: 0 15px; font-weight: bold; font-size: 16px; transition: color 0.2s, text-shadow 0.2s;" 
+    onmouseover="this.style.color='#ffffff'; this.style.textShadow='0 0 8px #ffeb3b';" 
+    onmouseout="this.style.color='#ffeb3b'; this.style.textShadow='none';">Add Activity</a>
+{% endblock %}

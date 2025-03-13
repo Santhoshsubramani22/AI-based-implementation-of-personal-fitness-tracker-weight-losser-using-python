@@ -1,0 +1,11 @@
+{% extends 'fitness/base.html' %}
+
+{% block content %}
+<h2 style="color: #673ab7; font-size: 36px; margin-bottom: 15px; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); letter-spacing: 1.5px; border-bottom: 3px solid #ff9800; display: inline-block; padding-bottom: 5px;">{{ user.username }}'s Profile</h2>
+<p style="text-align: justify; font-size: 18px; color: #555; margin-bottom: 20px; line-height: 1.8;">Email: {{ user.email }}</p>
+<p style="text-align: justify; font-size: 18px; color: #555; margin-bottom: 20px; line-height: 1.8;">Date of Birth: {{ user_profile.date_of_birth }}</p>
+<p style="text-align: justify; font-size: 18px; color: #555; margin-bottom: 20px; line-height: 1.8;">Height: {{ user_profile.height }} cm</p>
+<p style="text-align: justify; font-size: 18px; color: #555; margin-bottom: 20px; line-height: 1.8;">Weight: {{ user_profile.weight }} kg</p>
+<p style="text-align: justify; font-size: 18px; color: #555; margin-bottom: 20px; line-height: 1.8;">Fitness Level: {{ user_profile.fitness_level }}</p>
+<!-- Add more fields as needed -->
+{% endblock %}
